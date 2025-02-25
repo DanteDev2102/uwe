@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="service_landing_page" name="service_landing_page">
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=play_circle" />
+            <link href="https://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet" />
+        </head>
+
+        <style>
+            :root {
+                --blue-bg: #0074ba;
+                --blue-font: #003293;
+                --white-pure: #ffffff;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                font-size: 4rem;
+                margin-left: 6rem;
+            }
+
+            .logo {
+                width: 16em;
+                height: 10em;
+                position: relative;
+                top: 1em;
+                z-index: 100;
+            }
+
+            body {
+                font-family: 'Century Gothic Paneuropean', sans-serif;
+                background-color: var(--white-pure);
+                overflow: hidden;
+            }
+
+            nav {
+                background-color: var(--blue-bg);
+                color: var(--white-pure);
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                font-size: 2rem;
+                font-weigth: bold;
+                height: 17vh;
+                align-items: center;
+            }
+
+            .bg-img-trans {
+                background-image: url('/inpacol_landing_page/static/public/7.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.17;
+                height: 100%;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .container-data {
+                position: absolute;
+                top: 20%;
+                left: 3%;
+                display: flex;
+                gap: 5%;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weigth: 100;
+            }
+
+            .container-text {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 4%;
+            }
+
+            .cct {
+                height: 60vh;
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .container-video {
+                width: max-content;
+                display: grid;
+            }
+
+            .play-button {
+                background-color: transparent;
+                border: none;
+                margin: 3%;
+                position: absolute;
+            }
+
+            .play-button span {
+                font-size: 10em;
+                color: var(--white-pure);
+            }
+
+            .container-video video {
+                border: 5px solid var(--white-pure);
+                border-radius: 3%;
+                width: 20em;
+            }
+
+            .contain-videos {
+                width: 45%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+            }
+        </style>
+
+        <nav>
+            <h1>
+                SERVICIO MAQUILA
+            </h1>
+
+            <img class="logo" src="/inpacol_landing_page/static/public/logo.png" alt="logo" />
+        </nav>
+
+        <div>
+            <div class="bg-img-trans">
+            </div>
+        </div>
+
+        <div class="container-data">
+            <div class="cct">
+                <div class="container-text">
+                    <p>
+                        Uno de los servicios destacados es el Servicio de Maquila.
+                        Prestado al <strong>Central La Pastora</strong>
+                    </p>
+                    <p>
+                        En el caso del azúcar, esto implica que nosotros nos 
+                        encargamos de la <strong>transformación y empaquetado del producto</strong>, 
+                        permitiendo que nuestros clientes se concentren en otras áreas de su negocio.
+                    </p>
+                </div>
+                <div class="container-text">
+                    <p>
+                        <strong>Con años de experiencia en el sector</strong>, nuestro servicio de
+                        maquila y empaquetado de azúcar y otros alimentos como 
+                        granos, se ha convertido en una opción confiable para las 
+                        empresas que buscan eficiencia y calidad en sus procesos
+                    </p>
+                    <p>
+                        <strong>Estamos comprometidos con la satisfacción de nuestros clientes</strong> 
+                        y la mejora continua de nuestros servicios
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contain-videos">
+                <div class="container-video">
+                    <video class="myVideo" src="/inpacol_landing_page/static/public/video2.mp4" loop="false" />
+                    <button class="play-button">
+                        <span class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                    </button>
+                </div>
+
+                <div class="container-video" style="position: relative; top: 8em;">
+                    <video class="myVideo" src="/inpacol_landing_page/static/public/video3.mp4" loop="false" />
+                    <button class="play-button">
+                        <span class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const videos = document.querySelectorAll('.container-video');
+
+            videos.forEach(function (container) {
+                container.addEventListener("click", function (e) {
+                    const video = container.children[0];
+                    const buttonPlay = container.children[1];
+
+                    if (e.target.className === "material-symbols-outlined") {
+                        video.play();
+                        buttonPlay.style.visibility = 'hidden';
+                        return;
+                    }
+
+                    video.pause();
+                    buttonPlay.style.visibility = "visible";
+                })
+            });
+        </script>
+    </template>
+    
+
+</odoo>
