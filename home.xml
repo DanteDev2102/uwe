@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="landing_page" name="landing_page">
+        <head>
+            <link href="https://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet" />
+        </head>
+
+        <style>
+            :root {
+                --blue-bg: #0074ba;
+                --blue-font: #003293;
+                --white-pure: #ffffff;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Century Gothic Paneuropean', sans-serif;
+                background-color: var(--white-pure);
+            }
+
+            nav {
+                background-color: var(--blue-bg);
+                color: var(--white-pure);
+                display: flex;
+                justify-content: start;
+                padding: 1rem;
+                font-size: 1.7rem;
+                font-weigth: bold;
+                height: 17vh;
+                width: 100%;
+            }
+
+            nav div {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;  
+                position: relative;
+
+            }
+
+            nav div div a:hover {
+                color: var(--blue-font);
+                cursor: pointer;
+            }
+
+            nav div div {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border : 2px solid var(--white-pure);
+                border-top: none;
+                border-bottom: none;
+            }
+
+            nav div div:first-child {
+                border-left: none;
+            }
+            
+            nav div div:last-child {
+                border-right: none;
+            }
+
+            .img-container {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 1rem;
+            }
+
+            figure {
+                width: 50%;
+                height: 65vh;
+            }
+
+            figure img {
+                width: 100%;
+                height: 65vh;  
+                object-fit: cover;
+            }
+
+            .contact-container {
+                width: 100%;
+                height: 18vh;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                gap: 3rem;
+                font-size: 2rem;
+                color: var(--blue-font);
+                margin-top: -1rem;
+            }
+
+            .contain {
+                display: flex;
+                justify-content: center;
+            }
+
+            .contain-text {
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .icon-img {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            a {
+                border: none;
+                color: var(--white-pure);
+                text-decoration: none;
+            }
+
+            .logo {
+                width: 16em;
+                height: 10em;
+                position: relative;
+                top: -1em;
+                z-index: 100;
+            }
+
+            figure div {
+                background-color: rgba(255, 255, 255, 0.9);
+                position: relative;
+                top: -30%;
+                left: 50%;
+                padding: 0.6rem;
+                width: 40%;
+                height: 40%;
+                border-radius: 3rem;
+                z-index: 100;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+            }
+
+            .move {
+                left: 10%;
+            }
+
+            figure div h2 {
+                font-size: 3rem;
+                color: var(--blue-font);
+            }
+
+            .aa {
+                font-size: 2.5rem;
+            }
+
+            figure div img {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            figure div p {
+                text-align: center;
+                font-size: 1rem;
+            }
+        </style>
+
+        <nav>
+            <img class="logo" src="/inpacol_landing_page/static/public/logo.png" />
+            <div>
+                <div style="width: 8em;">
+                    <strong>
+                        <a href="/landing">INICIO</a>
+                    </strong>
+                </div>
+                <div>
+                    <strong>
+                        <a href="/landing/about">SOBRE NOSOTROS</a>
+                    </strong>
+                </div>
+                <div style="width: 8em;">
+                    <strong>
+                        <a href="/landing/products">PRODUCTOS</a>
+                    </strong>
+                </div>
+                <div>
+                    <strong>
+                        <a href="/landing/service">SERVICIO MAQUILA</a>
+                    </strong>
+                </div>
+                <div>
+                    <strong>
+                        <a href="/landing/contact">CONTÁCTANOS</a>
+                    </strong>
+                </div>
+            </div>
+        </nav>
+
+        <div class="img-container">
+            <figure>
+                <img src="/inpacol_landing_page/static/public/1.jpg"/>
+                <div>
+                    <img src="/inpacol_landing_page/static/public/ajuste.png" />
+                    <h2>
+                        Empaquetado
+                    </h2>
+                    <p>
+                        Con equipos de alta tecnología para el empaque, con altos estándares de calidad y un personal altamente capacitado.
+                    </p>
+                </div>
+            </figure>
+            <figure>
+                <img src="/inpacol_landing_page/static/public/2.png"/>
+                <div class="move">
+                    <img src="/inpacol_landing_page/static/public/camion.png" />
+                    <h2 class="aa">
+                        Comercialización
+                    </h2>
+                    <p>
+                        Contamos con clientes a nivel nacional con distribución constante y eficazmente, sin retrasos ni inconvenientes en cada entrega.
+                    </p>
+                </div>
+            </figure>
+        </div>
+
+        <div class="contact-container">
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/viber.png" />
+                <p class="contain-text">
+                    <strong>0251-000-0000</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/pasador-de-ubicacion.png" />
+                <p class="contain-text" style="top: 0">
+                    <strong>Zona Industrial I,</strong>
+                    <br />
+                    <strong>Barquisimeto, Edo. Lara</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/sobre-de-correo-electronico.png" />
+                <p class="contain-text">
+                    <strong>alimentoslamilagrosa@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+    </template>
+
+</odoo>
