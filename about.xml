@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="about_landing_page" name="about_landing_page">
+        <head>
+            <link href="https://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=play_circle" />
+        </head>
+
+        <style>
+            :root {
+                --blue-bg: #0074ba;
+                --blue-font: #003293;
+                --white-pure: #ffffff;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin-left: 5rem;
+            }
+
+            body {
+                font-family: 'Century Gothic Paneuropean', sans-serif;
+                background-color: var(--white-pure);
+                overflow-x: hidden;
+            }
+
+            nav {
+                height: 17vh;
+                background-color: var(--blue-bg);
+                color: var(--white-pure);
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                font-size: 2rem;
+                font-weigth: bold;
+            }
+
+            nav div {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;  
+            }
+
+            .logo {
+                width: 16em;
+                height: 10em;
+                position: relative;
+                top: -1em;
+                z-index: 100;
+            }
+
+            .bordererer {
+                box-shadow: 0px 3px 5px 0px rgba(5,5,5,1);
+                border-radius: 2em;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                margin-top: 1em;
+                height: 15em;
+                width: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+                background-color: var(--white-pure)
+            }
+
+            .contact-container {
+                width: 100%;
+                height: 20vh;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                gap: 3rem;
+                font-size: 2rem;
+                color: var(--blue-font);
+                margin-top: -1rem;
+            }
+
+            .contain {
+                display: flex;
+                justify-content: center;
+            }
+
+            .contain-text {
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+            }
+
+            .icon-img {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .bg-img-16 {
+                background-image: url('/inpacol_landing_page/static/public/16.png');
+                background-size: cover;
+                background-position: center;
+                height: 120vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+
+            .bg-img-18 {
+                background-image: url('/inpacol_landing_page/static/public/18.png');
+                background-size: cover;
+                background-position: center;
+                height: 120vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+
+            .bg-img-7{
+                background-image: url('/inpacol_landing_page/static/public/7.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 80vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+
+            .bg-img-9 {
+                background-image: url('/inpacol_landing_page/static/public/9.png');
+                background-size: cover;
+                background-position: center;
+                height: 80vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+
+            .bg-img-14 {
+                background-image: url('/inpacol_landing_page/static/public/14.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 50vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+
+            .bg-img-11 {
+                background-image: url('/inpacol_landing_page/static/public/11.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 50vh;
+                width: 50%;
+                opacity: 0.17;
+            }
+            
+            .opa {
+                opacity: 1;
+            }
+
+            .container-imgs {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .absoluto {
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .gz {
+                gap: 0;
+            }
+
+            .tt {
+                margin-top: 1rem;
+            }
+
+            div img {
+                height: 6rem;
+            }
+
+            h3 {
+                color: var(--blue-font);
+                font-size: 2em;
+            }
+
+            .text-contain {
+                position: absolute;
+                width: 100%;
+                top: 25%;
+                margin-left: 10em;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+
+            .fleft {
+                float: left;
+                margin-right: 3em;
+                margin-bottom: 5em;
+            }
+
+            .container-video {
+                width: max-content;
+                display: grid;
+                position: relative;
+                right: 30%;
+            }
+
+            .play-button {
+                background-color: transparent;
+                border: none;
+                margin: 3%;
+                position: absolute;
+            }
+
+            .play-button span {
+                font-size: 10em;
+                color: var(--white-pure);
+            }
+
+            .container-video video {
+                border: 5px solid var(--white-pure);
+                border-radius: 3%;
+                width: 25em;
+            }
+
+            .contain-vals {
+                height: 30vh;
+                width: 100vw;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .contain-lol {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                gap: 3rem;
+                margin-left: 7em;
+            }
+
+            .contain-lol img {
+                width: 30%;
+                border-radius: 4rem;
+            }
+
+            .img-flex {
+                width: 40%;
+                height: 110%;
+                object-fit: cover;
+                border-radius: 4rem;
+                margin-right: 7em;
+                box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.75);
+                margin-left: 10em;
+            }
+
+            ul li::marker {
+                color: var(--blue-font);
+                font-size: 1.8em;
+            }
+        </style>
+
+        <nav>
+            <h1>
+                SOBRE NOSOTROS
+            </h1>
+
+            <img class="logo" src="/inpacol_landing_page/static/public/logo.png" />
+        </nav>
+
+        <div>
+            <div class="container-imgs">
+                <div class="bg-img-7" />
+                <div class="bg-img-9 opa" />
+            </div>
+
+            <div class="text-contain">
+                <div >
+                    <div class="bordererer fleft">
+                        <h3>Historia</h3>
+                        <img src="/inpacol_landing_page/static/public/historia.png"/>
+                    </div>
+                    <div style="width: 40%;">
+                        <p style="font-size: 1.5em;">
+                            "La historia de La Tocuyana comienza en 1996, cuando la Sra. Irma París introdujo al mercado barquisimetano
+                            productos de calidad a los consumidores.
+                            <br />
+                            <br />
+                            Su visión emprendedora la llevó a construir una <strong>empresa líder en empaquetar, 
+                            comercializar y distribuir a nivel nacional.</strong>
+                            <br />
+                            <br />
+                            En 2013, José Manuel París, siguiendo el legado familiar, lanza al mercado <strong>Azúcar la Milagrosa</strong>, 
+                            consolidando la presencia de la empresa en el mercado azucarero.
+                            <br />
+                            <br />
+                            Con un enfoque en la satisfacción del cliente y la calidad de sus productos, la marca se ha ganado la confianza 
+                            de los consumidores.
+                            <br />
+                            <br />
+                            Actualmente, la empresa continúa innovando y expandiendo sus servicios, atendiendo las necesidades de importantes
+                            clientes como el <strong>Central La Pastora</strong>
+                            <br />
+                            <br />
+                            Con un compromiso inquebrantable con la calidad, la seguridad y el desarrollo de la región, la empresa 
+                            se ha posicionado como un referente en el sector, generando valor económico y social."
+                        </p>
+                    </div>
+                </div>
+                <div class="container-video">
+                    <video class="myVideo" src="/inpacol_landing_page/static/public/video1.mp4" loop="false" />
+                    <button class="play-button">
+                        <span class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 120vh;">
+            <div class="container-imgs gz absoluto">
+                <div class="bg-img-16" />
+                <div class="bg-img-18" />
+            </div>
+
+            <div class="contain-vals" style="position: relative; top: 10%;">
+                <div class="contain-lol">
+                    <div class="bordererer" style="width: 100%;">
+                        <h3>Misión</h3>
+                        <img src="/inpacol_landing_page/static/public/objetivo.png"/>
+                    </div>
+
+                    <p style="font-size: 1.5em;">
+                        Ser una empacadora de calidad con compromiso a la innovación y la comprensión de las necesidades de los consumidores, prestando el mejor
+                        servicio y asegurando el bienestar de los clientes y trabajadores de la empresa.
+                    </p>
+                </div>
+
+                <img class="img-flex" src="/inpacol_landing_page/static/public/13.jpg"/>
+            </div>
+
+            <div class="contain-vals" style="position: relative; top: 20%;">
+                <img style="width: 100%" class="img-flex" src="/inpacol_landing_page/static/public/13.jpg"/>
+
+                <div class="contain-lol" style="position: relative; right: 2%;">
+                    <div class="bordererer" style="width: 70%;">
+                        <h3>Visión</h3>
+                        <img src="/inpacol_landing_page/static/public/progreso.png" />
+                    </div>
+                </div>
+
+                <p style="width: 70%; position: relative; top: 20%; font-size: 1.5em; margin-right: 7em;">
+                    Convertise en la mejor y más competitiva empresa empaquetadora de alimentos, presentando a los clientes y consumidores una combinación de seguridad,
+                    precios y calidad, para empaquetamiento de alimentos obteniendo el mejor valor económico y asegurando la calidad de vida de todos los trabajadores
+                    que laboren en la empresa.
+                </p>
+            </div>
+
+            <div class="contain-vals" style="position: relative; top: 30%;">
+                
+
+                <div class="contain-lol" style="position: relative; right: 2%;">
+                    <div class="bordererer" style="width: 70%;">
+                        <h3>Valores</h3>
+                        <img src="/inpacol_landing_page/static/public/propuesta-de-valor.png" />
+                    </div>
+                </div>
+
+                <div style="display: grid; width: 80%; position: relative; top: 20%; margin-right: 7em; font-size: 1.5em; font-weigth: bold;">
+                    <ul style="display: flex; gap: 2rem; height: 1rem;">
+                        <li>
+                            <strong>Honestidad</strong>
+                        </li>
+                        <li>
+                            <strong>Calidad</strong>
+                        </li>
+                        <li>
+                            <strong>Puntualidad</strong>
+                        </li>
+                    </ul>
+                    <ul style="display: flex; gap: 2rem; position: relative; top: -40%;">
+                        <li>
+                            <strong>Pasión</strong>
+                        </li>
+                        <li>
+                            <strong>Trabajo en Equipo</strong>
+                        </li>
+                        <li>
+                            <strong>Adaptabilidad</strong>
+                        </li>
+                    </ul>
+                    <ul style="display: flex; gap: 2rem; position: relative; top: -100%;">
+                        <li>
+                            <strong>Constancia</strong>
+                        </li>
+                        <li>
+                            <strong>Responsabilidad</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <img style="width: 100%" class="img-flex" src="/inpacol_landing_page/static/public/15.png"/>
+            </div>
+        </div>
+
+        <div>
+            <div class="container-imgs gz tt">
+                <div class="bg-img-14 opa" />
+                <div class="bg-img-11 opa" />
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/viber.png" />
+                <p class="contain-text">
+                    <strong>0251-000-0000</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/pasador-de-ubicacion.png" />
+                <p class="contain-text" style="top: 0">
+                    <strong>Zona Industrial I,</strong>
+                    <br />
+                    <strong>Barquisimeto, Edo. Lara</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/sobre-de-correo-electronico.png" />
+                <p class="contain-text">
+                    <strong>alimentoslamilagrosa@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+
+        <script>
+            const videos = document.querySelectorAll('.container-video');
+
+            videos.forEach(function (container) {
+                container.addEventListener("click", function (e) {
+                    const video = container.children[0];
+                    const buttonPlay = container.children[1];
+
+                    if (e.target.className === "material-symbols-outlined") {
+                        video.play();
+                        buttonPlay.style.visibility = 'hidden';
+                        return;
+                    }
+
+                    video.pause();
+                    buttonPlay.style.visibility = "visible";
+                })
+            });
+        </script>
+    </template>
+</odoo>
