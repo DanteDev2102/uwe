@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="products_landing_page" name="products_landing_page">
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=play_circle" />
+            <link href="https://fonts.cdnfonts.com/css/century-gothic-paneuropean" rel="stylesheet" />
+        </head>
+
+        <style>
+            :root {
+                --blue-bg: #0074ba;
+                --blue-font: #003293;
+                --white-pure: #ffffff;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                font-size: 4rem;
+                margin-left: 6rem;
+            }
+
+            body {
+                font-family: 'Century Gothic Paneuropean', sans-serif;
+                background-color: var(--white-pure);
+                overflow-x: hidden;
+            }
+
+            nav {
+                background-color: var(--blue-bg);
+                color: var(--white-pure);
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                font-size: 2rem;
+                font-weigth: bold;
+                height: 17vh;
+                align-items: center;
+            }
+
+            .contact-container {
+                width: 100%;
+                height: 20vh;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                gap: 3rem;
+                font-size: 2rem;
+                color: var(--blue-font);
+                margin-top: -1rem;
+            }
+
+            .contain {
+                display: flex;
+                justify-content: center;
+            }
+
+            .contain-text {
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .icon-img {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .gg {
+                opacity: 0.17;
+                height: 50vh;
+                width: 100%;
+                background-image: url("/inpacol_landing_page/static/public/3.jpg");
+                object-fit: cover;
+                position: absolute;
+            }
+
+            .client-container {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                font-size: 4rem;
+                color: var(--blue-font);
+                z-index: 1;
+            }
+
+            .here-button {
+                border-radius: 75px;
+                height: 50%;
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 7px 29px 0px rgba(5,5,5,1);
+                background-color: var(--white-pure);
+                position: relative;
+            }
+
+            .here-button:hover {
+                cursor: pointer;
+            }
+
+            .contain-products {
+                margin-top: 4rem;
+                display: grid;
+                grid-template-columns: 70vh 50vh 1fr;
+            }
+
+            .sugar-img-2 {
+                width: 100%;
+                height: 60%;
+            }
+
+            .sugar-text {
+                font-size: 4rem;
+                color: var(--blue-font);
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 80%;
+                justify-content: center;
+                align-items: start;
+            }
+
+            figure {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            figure img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .figure {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                align-items: center;
+            }
+
+            
+            .figure img {
+                width: 100%;
+                height: 90%;
+                border-radius: 100px;
+                object-fit: cover;
+                box-shadow: 0px 7px 29px 0px rgba(5,5,5,0.6);
+                position: relative;
+                left: 7rem;
+                top: 9rem;
+            }
+
+            .logo {
+                width: 16em;
+                height: 10em;
+                position: relative;
+                top: 1em;
+                z-index: 100;
+            }
+        </style>
+
+        <nav>
+            <h1>
+                PRODUCTOS
+            </h1>
+
+            <img class="logo" src="/inpacol_landing_page/static/public/logo.png" />
+        </nav>
+
+        <div class="contain-products">
+            <figure class="sugar-img">
+                <img src="/inpacol_landing_page/static/public/ap1.png" />
+            </figure>
+            <div class="sugar-text">
+                <p>
+                    Azúcar Refinado
+                </p>
+                <p>
+                    La Pastora
+                </p>
+                <p>
+                    <strong>
+                        Cont. 1 Kg.
+                    </strong>
+                </p>
+            </div>
+            <div class="figure">    
+                <img src="/inpacol_landing_page/static/public/4.jpg" />
+            </div>
+            <figure class="move sugar-img">
+                <img src="/inpacol_landing_page/static/public/ap2.png" />
+            </figure>
+            <div class="move sugar-text">
+                <p>
+                    Azúcar Blanco
+                </p>
+                <p>
+                    La Pastora
+                </p>
+                <p>
+                    <strong>
+                        Cont. 1 Kg.
+                    </strong>
+                </p>
+            </div>
+            <div class="move figure">    
+                <img src="/inpacol_landing_page/static/public/8.png" />
+            </div>
+            <figure class="move-2 sugar-img">
+                <img src="/inpacol_landing_page/static/public/am3.png" />
+            </figure>
+            <div class="move-2 sugar-text">
+                <p>
+                    Azúcar
+                </p>
+                <p>
+                    La Milagrosa
+                </p>
+                <p>
+                    <strong>
+                        Cont. 1 Kg.
+                    </strong>
+                </p>
+            </div>
+            <div class="move-2 figure">    
+                <img src="/inpacol_landing_page/static/public/9.png" />
+            </div>
+            <figure class="move-3 sugar-img">
+                <img src="/inpacol_landing_page/static/public/am4.png" />
+            </figure>
+            <div class="move-3 sugar-text move">
+                <p>
+                    Azúcar
+                </p>
+                <p>
+                    La Milagrosa
+                </p>
+                <p>
+                    <strong>
+                        Cont. 900 g.
+                    </strong>
+                </p>
+            </div>
+            <div class="move-3 figure">    
+                <img src="/inpacol_landing_page/static/public/10.png" />
+            </div>
+        </div>
+
+        <div>
+            <div class="gg">
+            </div>
+            <div class="client-container">
+                <div>
+                    <div style="text-align: center">
+                        <strong>
+                            ¿Quieres ser parte
+                        </strong> 
+                    </div>
+                    <div style="text-align: center">
+                        <strong>
+                            de nuestra clientela?
+                        </strong>
+                    </div>
+                </div>
+                <div class="here-button">
+                    <strong>
+                        Pulsa Aqui
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/viber.png" />
+                <p class="contain-text">
+                    <strong>0251-000-0000</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/pasador-de-ubicacion.png" />
+                <p class="contain-text" style="top: 0">
+                    <strong>Zona Industrial I,</strong>
+                    <br />
+                    <strong>Barquisimeto, Edo. Lara</strong>
+                </p>
+            </div>
+            <div class="contain">
+                <img class="icon-img" src="/inpacol_landing_page/static/public/sobre-de-correo-electronico.png" />
+                <p class="contain-text">
+                    <strong>alimentoslamilagrosa@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+    </template>
+
+</odoo>
